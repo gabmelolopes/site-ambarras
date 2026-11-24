@@ -1,0 +1,734 @@
+/* ==========================================================
+   RESPONSIVO AMBAR RAS
+   Arquivo carregado depois do estilo principal para concentrar
+   todas as correções de tablet e celular em um único lugar.
+========================================================== */
+
+.mobile-nav-actions {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+
+  body {
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .topbar {
+    height: 76px !important;
+    grid-template-columns: minmax(0, 1fr) 48px !important;
+    gap: 14px !important;
+    padding: 0 22px !important;
+  }
+
+  .topbar .brand {
+    width: max-content;
+    min-width: 0;
+  }
+
+  .topbar .brand img {
+    width: 82px !important;
+    height: 62px !important;
+    max-height: 62px !important;
+  }
+
+  .topbar > .actions {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    position: relative;
+    z-index: 102;
+    width: 46px;
+    height: 46px;
+    display: grid !important;
+    align-content: center;
+    gap: 6px;
+    padding: 0 11px;
+    border: 1px solid #ffffff3d;
+    border-radius: 50%;
+    background: #ffffff08;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .mobile-menu-toggle span {
+    width: 100%;
+    height: 2px;
+    display: block;
+    border-radius: 2px;
+    background: currentColor;
+    transition: transform .25s ease, opacity .2s ease;
+  }
+
+  .topbar.menu-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .topbar.menu-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .topbar.menu-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .topbar > nav {
+    position: fixed !important;
+    z-index: 101 !important;
+    inset: 76px 0 auto !important;
+    width: 100% !important;
+    max-height: calc(100dvh - 76px) !important;
+    display: flex !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 18px 22px 26px !important;
+    overflow-y: auto !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    border: 0 !important;
+    border-top: 1px solid #ffffff16 !important;
+    border-radius: 0 !important;
+    background: #091423fc !important;
+    box-shadow: 0 24px 55px #02081280 !important;
+    transform: translateY(-10px) !important;
+    transition: opacity .22s ease, transform .22s ease, visibility .22s !important;
+  }
+
+  .topbar.menu-open > nav {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  .topbar > nav > a {
+    width: 100%;
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+    padding: 14px 0 !important;
+    border-bottom: 1px solid #ffffff14;
+    color: #fff;
+    font-size: 18px !important;
+    font-weight: 600;
+  }
+
+  .topbar > nav > a::after {
+    display: none !important;
+  }
+
+  .topbar > nav > a.active {
+    color: #f7b733;
+  }
+
+  .mobile-nav-actions {
+    display: grid;
+    gap: 12px;
+    padding-top: 20px;
+  }
+
+  .mobile-nav-actions a {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px !important;
+    border: 1px solid #ffffff2c !important;
+    color: #fff;
+    font-size: 14px !important;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .mobile-nav-actions .mobile-nav-contact {
+    border-color: #f7b733 !important;
+    background: #f7b733;
+    color: #142038;
+  }
+
+  body.menu-is-open {
+    overflow: hidden !important;
+  }
+
+  .expertise-section,
+  .consulting-section,
+  .training-section,
+  .event-feature,
+  .partners-heading,
+  .faq-section,
+  .contact-section,
+  .about-story,
+  .about-modules-heading,
+  .about-partners,
+  .expertise-intro-new,
+  .expertise-domains,
+  .expertise-impact,
+  .modules-overview,
+  .modules-integration,
+  .module-detail,
+  .training-page-hero,
+  .training-promise,
+  .learning-path,
+  .course-heading {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .modules-grid,
+  .pillars-grid,
+  .purpose-grid,
+  .domains-grid,
+  .testimonials-grid,
+  .partners-grid,
+  .about-module-grid,
+  .training-benefit-band {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .about-partner-logos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .module-detail-reverse .module-detail-visual {
+    order: 0 !important;
+  }
+
+  .integration-flow {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .footer-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: 1 / -1;
+  }
+
+  .client-shell {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .client-showcase {
+    position: relative !important;
+    min-height: auto !important;
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --mobile-gutter: 20px;
+  }
+
+  .topbar {
+    padding-inline: var(--mobile-gutter) !important;
+  }
+
+  .hero {
+    height: auto !important;
+    min-height: 760px !important;
+  }
+
+  .slides,
+  .slide {
+    min-height: 760px;
+  }
+
+  .slide {
+    background-position: 64% center;
+  }
+
+  .slide .shade {
+    background: linear-gradient(90deg, #081426fc 0%, #0a1729f2 64%, #0a1729a8 100%);
+  }
+
+  .content {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 118px var(--mobile-gutter) 150px !important;
+  }
+
+  .partner {
+    max-width: 100%;
+    margin-bottom: 23px;
+    padding: 8px 10px;
+    font-size: 10px;
+    line-height: 1.45;
+    letter-spacing: .055em;
+  }
+
+  .eyebrow,
+  .about-kicker,
+  .section-kicker {
+    font-size: 11px !important;
+    line-height: 1.55;
+    letter-spacing: .12em !important;
+  }
+
+  .content h1,
+  .about-hero h1,
+  .expertise-hero h1,
+  .modules-hero h1,
+  .training-page-copy h1,
+  .client-showcase h1 {
+    font-size: clamp(38px, 11.2vw, 52px) !important;
+    line-height: 1.03 !important;
+    letter-spacing: -.045em !important;
+  }
+
+  .description,
+  .about-hero-copy > p:not(.about-kicker),
+  .expertise-hero-copy > p:not(.about-kicker),
+  .modules-hero-copy > p:not(.about-kicker),
+  .training-page-copy > p:not(.about-kicker),
+  .client-showcase-copy > p:not(.client-eyebrow) {
+    max-width: none !important;
+    margin-top: 23px !important;
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  .ctas,
+  .about-hero-actions {
+    width: 100%;
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+    margin-top: 27px !important;
+  }
+
+  .ctas .primary,
+  .ctas .secondary,
+  .about-hero-actions .primary,
+  .about-hero-actions .secondary {
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+    padding: 12px 17px;
+    text-align: center;
+  }
+
+  .controls {
+    right: var(--mobile-gutter) !important;
+    bottom: 24px !important;
+  }
+
+  .controls > button {
+    display: none !important;
+  }
+
+  .pages button {
+    width: 34px;
+  }
+
+  .trust {
+    display: none !important;
+  }
+
+  .expertise-section,
+  .modules-section,
+  .consulting-section,
+  .training-section,
+  .testimonials-section,
+  .events-partners,
+  .faq-section,
+  .contact-section,
+  .about-story,
+  .about-pillars,
+  .purpose-section,
+  .about-modules,
+  .about-partners-copy,
+  .expertise-intro-new,
+  .expertise-method,
+  .expertise-domains,
+  .expertise-impact,
+  .expertise-partners,
+  .modules-overview,
+  .modules-integration,
+  .module-detail-copy,
+  .course-catalog,
+  .training-promise,
+  .learning-path-copy,
+  .modules-final-cta,
+  .training-final-cta,
+  .expertise-final-cta,
+  .about-cta {
+    padding-inline: var(--mobile-gutter) !important;
+  }
+
+  .expertise-section,
+  .modules-section,
+  .consulting-section,
+  .training-section,
+  .testimonials-section,
+  .events-partners,
+  .faq-section,
+  .contact-section,
+  .about-story,
+  .about-pillars,
+  .purpose-section,
+  .about-modules,
+  .about-partners-copy,
+  .expertise-intro-new,
+  .expertise-method,
+  .expertise-domains,
+  .expertise-impact,
+  .expertise-partners,
+  .modules-overview,
+  .modules-integration,
+  .course-catalog,
+  .training-promise {
+    padding-block: 72px !important;
+  }
+
+  .expertise-section,
+  .consulting-section,
+  .training-section,
+  .event-feature,
+  .partners-heading,
+  .contact-section,
+  .about-story,
+  .about-modules-heading,
+  .about-partners,
+  .expertise-intro-new,
+  .expertise-domains,
+  .expertise-impact,
+  .modules-overview,
+  .modules-integration,
+  .training-promise,
+  .learning-path,
+  .course-heading,
+  .module-detail {
+    gap: 30px !important;
+  }
+
+  .expertise-intro h2,
+  .modules-heading h2,
+  .consulting-lead h2,
+  .training-copy h2,
+  .testimonials-heading h2,
+  .partners-heading h2,
+  .faq-intro h2,
+  .contact-intro h2,
+  .about-story-title h2,
+  .pillars-heading h2,
+  .purpose-heading h2,
+  .about-modules-heading h2,
+  .about-partners h2,
+  .expertise-intro-new h2,
+  .domains-copy h2,
+  .impact-copy h2,
+  .modules-overview h2,
+  .module-detail-copy h2,
+  .modules-integration h2,
+  .training-promise h2,
+  .learning-path-copy h2,
+  .course-heading h2,
+  .auth-heading h2 {
+    font-size: clamp(34px, 9.5vw, 44px) !important;
+    line-height: 1.07 !important;
+    letter-spacing: -.04em !important;
+  }
+
+  .modules-grid,
+  .pillars-grid,
+  .purpose-grid,
+  .domains-grid,
+  .testimonials-grid,
+  .partners-grid,
+  .about-module-grid,
+  .training-benefit-band,
+  .form-row,
+  .field-grid,
+  .contact-points {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .feature-card,
+  .module-card,
+  .testimonial-card,
+  .pillars-grid article,
+  .purpose-grid article,
+  .about-module-grid a {
+    min-height: auto !important;
+  }
+
+  .feature-card,
+  .module-card,
+  .testimonial-card,
+  .pillars-grid article,
+  .purpose-grid article {
+    padding: 28px 24px !important;
+  }
+
+  .about-module-grid a {
+    min-height: 170px !important;
+    padding: 22px !important;
+  }
+
+  .about-hero,
+  .expertise-hero,
+  .modules-hero {
+    min-height: auto !important;
+    padding: 128px var(--mobile-gutter) 76px !important;
+  }
+
+  .about-hero-copy,
+  .expertise-hero-copy,
+  .modules-hero-copy {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .about-hero-stats,
+  .about-scroll,
+  .modules-hero-stack,
+  .modules-hero-foot,
+  .training-page-foot {
+    display: none !important;
+  }
+
+  .training-page-hero {
+    min-height: auto !important;
+    gap: 42px !important;
+    padding: 128px var(--mobile-gutter) 72px !important;
+  }
+
+  .training-page-copy {
+    width: 100%;
+  }
+
+  .training-player,
+  .module-screen,
+  .learning-screen {
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  .player-stage {
+    min-height: 290px !important;
+    padding: 26px !important;
+  }
+
+  .module-detail,
+  .learning-path {
+    min-height: 0 !important;
+  }
+
+  .module-detail-visual,
+  .learning-path-visual {
+    min-height: 380px !important;
+    padding: 48px 18px !important;
+  }
+
+  .module-detail-copy,
+  .learning-path-copy {
+    padding-block: 64px !important;
+  }
+
+  .module-metric,
+  .learning-badge {
+    right: 16px !important;
+    bottom: 18px !important;
+    min-width: 118px !important;
+    padding: 14px !important;
+  }
+
+  .module-jump {
+    top: 76px !important;
+    justify-content: flex-start !important;
+    padding: 9px var(--mobile-gutter) !important;
+    overflow-x: auto !important;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+
+  .module-jump::-webkit-scrollbar {
+    display: none;
+  }
+
+  .module-jump > * {
+    flex: 0 0 auto;
+  }
+
+  .integration-flow {
+    min-height: 0 !important;
+    flex-wrap: wrap;
+    padding: 26px 16px !important;
+  }
+
+  .integration-flow span {
+    min-width: calc(50% - 24px) !important;
+  }
+
+  .course-accordion summary {
+    min-height: 92px !important;
+    grid-template-columns: 26px minmax(0, 1fr) 36px !important;
+    gap: 10px !important;
+    padding: 16px 4px !important;
+  }
+
+  .course-accordion summary > strong {
+    display: none !important;
+  }
+
+  .course-body {
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    padding: 4px 4px 34px 40px !important;
+  }
+
+  .course-body ul {
+    grid-template-columns: 1fr !important;
+  }
+
+  .training-benefit-band > div {
+    min-height: auto !important;
+    padding: 44px var(--mobile-gutter) !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #ffffff14;
+  }
+
+  .modules-final-cta,
+  .training-final-cta,
+  .expertise-final-cta,
+  .about-cta {
+    align-items: stretch !important;
+    flex-direction: column !important;
+    gap: 28px !important;
+    padding-block: 54px !important;
+  }
+
+  .modules-final-cta .primary,
+  .training-final-cta .primary,
+  .expertise-final-cta .primary,
+  .about-cta .primary {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-partner-logos {
+    grid-template-columns: 1fr !important;
+  }
+
+  .about-partner-logos div {
+    min-height: 150px !important;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+    padding: 58px var(--mobile-gutter) 44px !important;
+  }
+
+  .footer-brand,
+  .footer-contact {
+    grid-column: auto !important;
+  }
+
+  .footer-brand img {
+    width: 118px !important;
+    height: auto !important;
+  }
+
+  .footer-bottom,
+  .footer-bottom div {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+    gap: 13px !important;
+  }
+
+  .footer-bottom {
+    padding: 22px var(--mobile-gutter) !important;
+  }
+
+  .client-showcase,
+  .auth-side {
+    padding-inline: var(--mobile-gutter) !important;
+  }
+
+  .client-showcase {
+    padding-block: 28px 54px !important;
+  }
+
+  .client-brand img {
+    width: 96px !important;
+    height: auto !important;
+  }
+
+  .client-showcase-copy {
+    padding: 44px 0 25px !important;
+  }
+
+  .client-showcase-foot,
+  .auth-topbar,
+  .auth-options,
+  .auth-card-footer,
+  .auth-card-footer div {
+    align-items: flex-start !important;
+    flex-direction: column !important;
+  }
+
+  .auth-side {
+    min-height: auto !important;
+    padding-bottom: 58px !important;
+  }
+
+  .auth-topbar {
+    height: auto !important;
+    min-height: 82px;
+    justify-content: center;
+    gap: 8px !important;
+    padding-block: 14px;
+  }
+
+  .auth-card {
+    margin-top: 34px !important;
+  }
+
+  .auth-tabs {
+    margin-bottom: 36px !important;
+  }
+
+  .register-actions {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 390px) {
+  :root {
+    --mobile-gutter: 17px;
+  }
+
+  .content h1,
+  .about-hero h1,
+  .expertise-hero h1,
+  .modules-hero h1,
+  .training-page-copy h1,
+  .client-showcase h1 {
+    font-size: 37px !important;
+  }
+
+  .primary,
+  .dark-cta,
+  .form-submit,
+  .auth-submit {
+    font-size: 12px !important;
+  }
+
+  .player-stage {
+    min-height: 250px !important;
+  }
+}
